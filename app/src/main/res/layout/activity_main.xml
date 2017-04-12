@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pranavbapat.assignment5.MainActivity">
+
+    <Spinner
+        android:id="@+id/filterCountry"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/filterState" />
+
+    <Spinner
+        android:id="@+id/filterState"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/filterCountry"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/filterYear"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@+id/filterState"
+        android:layout_alignStart="@+id/filterState"
+        android:layout_marginTop="28dp" />
+
+    <ListView
+        android:id="@+id/listview_users"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/filterYear" />
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="600dp"
+        android:layout_height="400dp"
+        android:layout_weight="1.10"
+        android:layout_marginLeft="20dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_marginEnd="22dp"
+        android:layout_alignBottom="@+id/listview_users"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/button_apply_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/filterYear"
+        android:layout_alignEnd="@+id/listview_users"
+        android:text="Filter"
+        android:onClick="filterUsers"/>
+</RelativeLayout>

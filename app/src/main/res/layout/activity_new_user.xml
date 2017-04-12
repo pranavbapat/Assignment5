@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pranavbapat.assignment5.NewUserActivity">
+
+    <TextView
+        android:id="@+id/textView_user_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/map"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/tv_user_form" />
+
+    <EditText
+        android:id="@+id/user_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView_user_form"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="@string/user_nickname_hint"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/user_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/user_nickname"
+        android:layout_below="@+id/user_nickname"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="@string/user_password_hint"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/button_set_location"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/button_set_location"
+        android:onClick="setUserLocation"
+        android:textColor="@color/white"
+        android:layout_below="@+id/map"
+        android:layout_alignEnd="@+id/map"
+        android:layout_marginEnd="16dp" />
+
+    <Spinner
+        android:id="@+id/spinner_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/user_password"
+        android:layout_alignStart="@+id/user_password"
+        android:layout_below="@+id/user_password"
+        android:layout_marginTop="36dp" />
+
+    <Spinner
+        android:id="@+id/spinner_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/spinner_country"
+        android:layout_alignStart="@+id/spinner_country"
+        android:layout_below="@+id/spinner_country"
+        android:layout_marginTop="39dp" />
+
+    <Button
+        android:id="@+id/button_add_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:text="@string/button_add_user"
+        android:onClick="addNewUser"
+        android:textColor="@color/white"
+        android:layout_below="@+id/button_set_location"
+        android:layout_alignEnd="@+id/numberPickerYear"
+        android:layout_marginTop="43dp" />
+
+    <EditText
+        android:id="@+id/user_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/spinner_state"
+        android:layout_below="@+id/spinner_state"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="@string/user_city_hint"
+        android:inputType="textPersonName" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="600dp"
+        android:layout_height="500dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="28dp"
+        android:layout_weight="1.10" />
+
+    <NumberPicker
+        android:id="@+id/numberPickerYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/user_city"
+        android:layout_alignEnd="@+id/textView_user_form" />
+
+    <TextView
+        android:id="@+id/textView_lat_long"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/user_lat_long"
+        android:layout_alignBaseline="@+id/button_set_location"
+        android:layout_alignBottom="@+id/button_set_location"
+        android:layout_toEndOf="@+id/user_city"
+        android:layout_marginStart="49dp" />
+
+</RelativeLayout>

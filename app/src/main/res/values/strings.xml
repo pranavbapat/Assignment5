@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Assignment5</string>
+    <string name="add_user">Add</string>
+    <string name="tv_user_form">User Form</string>
+
+    <string name="button_set_location">Set Location</string>
+    <string name="button_add_user">Add User</string>
+
+    <string name="user_nickname_hint">nickname</string>
+    <string name="user_password_hint">password</string>
+    <string name="user_city_hint">city</string>
+    <string name="user_lat_long">(Latitude,Longitude)</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_nickname">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="action_register_user">Register</string>
+</resources>
